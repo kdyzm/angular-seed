@@ -40,6 +40,10 @@ const routes: Routes = [
             }
         ],
         canActivate: [LoginGuard]
+    },
+    {
+        path: 'luxury-lazy',
+        loadChildren:'app/components/luxury/lzay/luxury-module.lazy.ts'
     }
 ];
 

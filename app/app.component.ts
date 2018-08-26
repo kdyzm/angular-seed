@@ -11,6 +11,7 @@ import {Router} from "@angular/router";
             <a [routerLink]="['/product']">Product Detail</a>
             <a [routerLink]="['/product-param',1234]">Product Detail With Param</a>
             <a [routerLink]="['/luxury']">Luxury Module</a>
+            <a [routerLink]="['/luxury-lazy']">Luxury Lazy Module</a>
             <input type="button" value="Product Detail" (click)="navigateToProductDetail()"/>
             <router-outlet></router-outlet>
             <router-outlet name="aux"></router-outlet>
