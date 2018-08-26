@@ -9,6 +9,7 @@ import {ProductDetailParamComponent} from "./components/product/product-detail-p
 import {ProductDescriptionComponent} from "./components/product/product-description.component";
 import {SellerInfoComponent} from "./components/product/seller-info.component";
 import {LoginGuard} from "./components/validate/login-guard";
+import {ChatComponent} from "./components/chat/chat.component";
 
 @NgModule({
     imports: [BrowserModule,routing],
@@ -18,7 +19,8 @@ import {LoginGuard} from "./components/validate/login-guard";
         ProductDetailComponent,
         ProductDetailParamComponent,
         ProductDescriptionComponent,
-        SellerInfoComponent
+        SellerInfoComponent,
+        ChatComponent
     ],
     providers:[{provide: LocationStrategy,useClass: HashLocationStrategy},LoginGuard],
     bootstrap: [AppComponent]

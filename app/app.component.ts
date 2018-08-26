@@ -5,11 +5,14 @@ import {Router} from "@angular/router";
     {
         selector: 'app',
         template: `
-            <a [routerLink]="['/']">Home</a>
+            <a [routerLink]="['']">Home</a>
+            <a [routerLink]="[{outlets:{primary: 'home',aux: 'chat'}}]">Open Chat</a>
+            <a [routerLink]="[{outlets:{aux: null}}]">Close Chat</a>
             <a [routerLink]="['/product']">Product Detail</a>
             <a [routerLink]="['/product-param',1234]">Product Detail With Param</a>
             <input type="button" value="Product Detail" (click)="navigateToProductDetail()"/>
             <router-outlet></router-outlet>
+            <router-outlet name="aux"></router-outlet>
         `
     }
 )
