@@ -5,10 +5,11 @@ import {HomeComponent} from "./components/home/home.component";
 import {ProductDetailComponent} from "./components/product/product-detail.component";
 import {routing} from "./app.routing";
 import {HashLocationStrategy, LocationStrategy} from "@angular/common";
+import {ProductDetailParamComponent} from "./components/product/product-detail-param.component";
 
 @NgModule({
     imports: [BrowserModule,routing],
-    declarations:[AppComponent,HomeComponent,ProductDetailComponent],
+    declarations:[AppComponent,HomeComponent,ProductDetailComponent,ProductDetailParamComponent],
     providers:[{provide: LocationStrategy,useClass: HashLocationStrategy}],
     bootstrap: [AppComponent]
 })
