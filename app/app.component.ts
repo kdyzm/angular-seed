@@ -3,12 +3,12 @@ import {Component} from "@angular/core";
 @Component(
     {
         selector: 'app',
-        template: `<h1>Hello {{name}}</h1>`
+        template: `
+            <a [routerLink]="['/']">Home</a>
+            <a [routerLink]="['/product']">Product Detail</a>
+            <router-outlet></router-outlet>
+        `
     }
 )
-export class AppComponent{
-    name: string,
-    constructor(){
-        this.name = 'Angular 2';
-    }
+export class AppComponent {
 }
