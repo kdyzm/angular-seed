@@ -10,9 +10,10 @@ import {ProductDescriptionComponent} from "./components/product/product-descript
 import {SellerInfoComponent} from "./components/product/seller-info.component";
 import {LoginGuard} from "./components/validate/login-guard";
 import {ChatComponent} from "./components/chat/chat.component";
+import {LuxuryModule} from "./components/luxury/luxury-module";
 
 @NgModule({
-    imports: [BrowserModule,routing],
+    imports: [BrowserModule,routing,LuxuryModule],
     declarations:[
         AppComponent,
         HomeComponent,
