@@ -4,6 +4,7 @@ import {ProductDetailComponent} from "./components/product/product-detail.compon
 import {ProductDetailParamComponent} from "./components/product/product-detail-param.component";
 import {ProductDescriptionComponent} from "./components/product/product-description.component";
 import {SellerInfoComponent} from "./components/product/seller-info.component";
+import {LoginGuard} from "./components/validate/login-guard";
 
 const routes: Routes = [
     {
@@ -26,7 +27,8 @@ const routes: Routes = [
                 path: 'seller/:id',
                 component: SellerInfoComponent
             }
-        ]
+        ],
+        canActivate: [LoginGuard]
     }
 ];
 

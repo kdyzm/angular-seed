@@ -8,11 +8,19 @@ import {HashLocationStrategy, LocationStrategy} from "@angular/common";
 import {ProductDetailParamComponent} from "./components/product/product-detail-param.component";
 import {ProductDescriptionComponent} from "./components/product/product-description.component";
 import {SellerInfoComponent} from "./components/product/seller-info.component";
+import {LoginGuard} from "./components/validate/login-guard";
 
 @NgModule({
     imports: [BrowserModule,routing],
-    declarations:[AppComponent,HomeComponent,ProductDetailComponent,ProductDetailParamComponent,ProductDescriptionComponent,SellerInfoComponent],
-    providers:[{provide: LocationStrategy,useClass: HashLocationStrategy}],
+    declarations:[
+        AppComponent,
+        HomeComponent,
+        ProductDetailComponent,
+        ProductDetailParamComponent,
+        ProductDescriptionComponent,
+        SellerInfoComponent
+    ],
+    providers:[{provide: LocationStrategy,useClass: HashLocationStrategy},LoginGuard],
     bootstrap: [AppComponent]
 })
 export class AppModule{}
